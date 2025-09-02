@@ -15,36 +15,21 @@ export function main() {
   account.deposit(5000);
   account.visualize();
 
-   // Objeto da Classe ContaCorrente (Teste)
-    const currentAccount: CurrentAccount = new CurrentAccount(
-      "Mariana",
-      123,
-      2,
-      1,
-      15000,
-      1000
-    );
-    currentAccount.visualize();
-    currentAccount.withdraw(2000);
-    currentAccount.visualize();
-    currentAccount.deposit(1000);
-    currentAccount.visualize();
+  // Objeto da Classe ContaCorrente (Teste)
+  const currentAccount: CurrentAccount = new CurrentAccount("Mariana", 123, 2, 1, 15000, 1000);
+  currentAccount.visualize();
+  currentAccount.withdraw(2000);
+  currentAccount.visualize();
+  currentAccount.deposit(1000);
+  currentAccount.visualize();
 
-    // Objeto da Classe ContaPoupanca (teste)
-    const savingAccount: SavingAccount = new SavingAccount(
-      "Victor",
-      123,
-      3,
-      2,
-      1000,
-      10
-    );
-    savingAccount.visualize();
-    savingAccount.withdraw(200);
-    savingAccount.visualize();
-    savingAccount.deposit(1000);
-    savingAccount.visualize();
-
+  // Objeto da Classe ContaPoupanca (teste)
+  const savingAccount: SavingAccount = new SavingAccount("Victor", 123, 3, 2, 1000, 10);
+  savingAccount.visualize();
+  savingAccount.withdraw(200);
+  savingAccount.visualize();
+  savingAccount.deposit(1000);
+  savingAccount.visualize();
 
   while (true) {
     console.log(
