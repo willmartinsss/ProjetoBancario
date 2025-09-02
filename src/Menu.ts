@@ -1,13 +1,57 @@
 import readlinesync = require("readline-sync");
 import { colors } from "./utils/Colors";
+import { Account } from "./Models/Account";
+import { CurrentAccount } from "./Models/CurrentAccount";
+import { SavingAccount } from "./Models/SavingsAccount";
 
 export function main() {
   let opcao: number;
 
+  //teste
+  const account = new Account("Adriana", 123, 1, 1, 1000);
+  account.visualize();
+  account.withdraw(10500);
+  account.visualize();
+  account.deposit(5000);
+  account.visualize();
+
+   // Objeto da Classe ContaCorrente (Teste)
+    const currentAccount: CurrentAccount = new CurrentAccount(
+      "Mariana",
+      123,
+      2,
+      1,
+      15000,
+      1000
+    );
+    currentAccount.visualize();
+    currentAccount.withdraw(2000);
+    currentAccount.visualize();
+    currentAccount.deposit(1000);
+    currentAccount.visualize();
+
+    // Objeto da Classe ContaPoupanca (teste)
+    const savingAccount: SavingAccount = new SavingAccount(
+      "Victor",
+      123,
+      3,
+      2,
+      1000,
+      10
+    );
+    savingAccount.visualize();
+    savingAccount.withdraw(200);
+    savingAccount.visualize();
+    savingAccount.deposit(1000);
+    savingAccount.visualize();
+
+
   while (true) {
     console.log(
-      colors.bg.black,colors.fg.blue,
-    "*****************************************************");
+      colors.bg.black,
+      colors.fg.blue,
+      "*****************************************************"
+    );
     console.log("                                                     ");
     console.log("                BANCO DO BRAZIL COM Z                ");
     console.log("                                                     ");
@@ -107,11 +151,21 @@ export function sobre(): void {
   console.log(
     colors.bg.black,
     colors.fg.blue,
-    "\n*****************************************************");
+    "\n*****************************************************"
+  );
   console.log("Projeto Desenvolvido por: William Martins De Almeida");
   console.log("Generation Brasil - generation@generation.org");
   console.log("github.com/conteudoGeneration");
-  console.log("*****************************************************", colors.reset);
+  console.log(
+    "*****************************************************",
+    colors.reset
+  );
+}
+
+function keyPress(): void {
+  console.log(colors.reset, "");
+  console.log("\nPressione enter para continuar...");
+  readlinesync.prompt();
 }
 
 main();
