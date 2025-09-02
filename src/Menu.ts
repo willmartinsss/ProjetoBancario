@@ -32,11 +32,8 @@ export function main() {
   savingAccount.visualize();
 
   while (true) {
-    console.log(
-      colors.bg.black,
-      colors.fg.blue,
-      "*****************************************************"
-    );
+    console.log(colors.bg.black,colors.fg.blue,
+                "*****************************************************");
     console.log("                                                     ");
     console.log("                BANCO DO BRAZIL COM Z                ");
     console.log("                                                     ");
@@ -133,18 +130,11 @@ export function main() {
 /* Função com os dados da pessoa desenvolvedora */
 
 export function sobre(): void {
-  console.log(
-    colors.bg.black,
-    colors.fg.blue,
-    "\n*****************************************************"
-  );
+  console.log(colors.bg.black, colors.fg.blue,"\n*****************************************************" );
   console.log("Projeto Desenvolvido por: William Martins De Almeida");
   console.log("Generation Brasil - generation@generation.org");
   console.log("github.com/conteudoGeneration");
-  console.log(
-    "*****************************************************",
-    colors.reset
-  );
+  console.log("*****************************************************",colors.reset);
 }
 
 function keyPress(): void {
