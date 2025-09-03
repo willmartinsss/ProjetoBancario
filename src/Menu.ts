@@ -7,16 +7,15 @@ import { SavingAccount } from "./Models/SavingsAccount";
 export function main() {
   let opcao: number;
 
-  //teste
-  const account = new Account("Adriana", 123, 1, 1, 1000);
-  account.visualize();
-  account.withdraw(10500);
-  account.visualize();
-  account.deposit(5000);
-  account.visualize();
-
   // Objeto da Classe ContaCorrente (Teste)
-  const currentAccount: CurrentAccount = new CurrentAccount("Mariana", 123, 2, 1, 15000, 1000);
+  const currentAccount: CurrentAccount = new CurrentAccount(
+    "Mariana",
+    123,
+    2,
+    1,
+    15000,
+    1000
+  );
   currentAccount.visualize();
   currentAccount.withdraw(2000);
   currentAccount.visualize();
@@ -24,7 +23,14 @@ export function main() {
   currentAccount.visualize();
 
   // Objeto da Classe ContaPoupanca (teste)
-  const savingAccount: SavingAccount = new SavingAccount("Victor", 123, 3, 2, 1000, 10);
+  const savingAccount: SavingAccount = new SavingAccount(
+    "Victor",
+    123,
+    3,
+    2,
+    1000,
+    10
+  );
   savingAccount.visualize();
   savingAccount.withdraw(200);
   savingAccount.visualize();
@@ -32,8 +38,11 @@ export function main() {
   savingAccount.visualize();
 
   while (true) {
-    console.log(colors.bg.black,colors.fg.blue,
-                "*****************************************************");
+    console.log(
+      colors.bg.black,
+      colors.fg.blue,
+      "*****************************************************"
+    );
     console.log("                                                     ");
     console.log("                BANCO DO BRAZIL COM Z                ");
     console.log("                                                     ");
@@ -130,11 +139,18 @@ export function main() {
 /* Função com os dados da pessoa desenvolvedora */
 
 export function sobre(): void {
-  console.log(colors.bg.black, colors.fg.blue,"\n*****************************************************" );
+  console.log(
+    colors.bg.black,
+    colors.fg.blue,
+    "\n*****************************************************"
+  );
   console.log("Projeto Desenvolvido por: William Martins De Almeida");
   console.log("Generation Brasil - generation@generation.org");
   console.log("github.com/conteudoGeneration");
-  console.log("*****************************************************",colors.reset);
+  console.log(
+    "*****************************************************",
+    colors.reset
+  );
 }
 
 function keyPress(): void {

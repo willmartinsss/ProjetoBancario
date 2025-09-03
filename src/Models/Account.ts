@@ -1,4 +1,4 @@
-export class Account {
+export abstract class Account {
 
   private _holder: string;
   private _agency: number;
