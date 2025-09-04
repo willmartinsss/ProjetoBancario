@@ -1,22 +1,21 @@
 export abstract class Account {
-
-  private _holder: string;
-  private _agency: number;
   private _number: number;
+  private _agency: number;
   private _type: number;
+  private _holder: string;
   private _amount: number;
 
   constructor(
-    holder: string,
-    agency: number,
     number: number,
+    agency: number,
     type: number,
+    holder: string,
     amount: number
   ) {
-    this._holder = holder;
-    this._agency = agency;
     this._number = number;
+    this._agency = agency;
     this._type = type;
+    this._holder = holder;
     this._amount = amount;
   }
 
@@ -64,7 +63,9 @@ export abstract class Account {
 
   public withdraw(amount: number): boolean {
     if (this._amount < amount) {
-      console.log(`\nSaldo insuficiente, pois o saldo  está com R$ ${this._amount}`);
+      console.log(
+        `\nSaldo insuficiente, pois o saldo  está com R$ ${this._amount}`
+      );
       return false;
     }
 

@@ -1,6 +1,6 @@
 import { Account } from "../Models/Account";
 
-export interface IAccountInterface extends  Account {
+export interface IAccountInterface {
   // CRUD da Conta
   searchByNumber(number: number): void;
   listAll(): void;
@@ -14,5 +14,6 @@ export interface IAccountInterface extends  Account {
   transfer(
     sourceNumber: number,
     destinationNumber: number,
-    amount: number ): void;
+    amount: number
+  ): void;
 }

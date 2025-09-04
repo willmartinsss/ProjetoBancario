@@ -4,14 +4,14 @@ export class CurrentAccount extends Account {
   private _limit: number;
 
   constructor(
-    holder: string,
     agency: number,
     number: number,
     type: number,
+    holder: string,
     amount: number,
     limit: number
   ) {
-    super(holder, agency, number, type, amount);
+    super(agency, number, type, holder, amount);
     this._limit = limit;
   }
 
