@@ -9,8 +9,8 @@ export interface IAccountInterface {
   delete(number: number): void;
 
   // Métodos Bancários
-  withdraw(accountNumber: number, amount: number): void;
-  deposit(accountNumber: number, amount: number): void;
+  withdraw(number: number, value: number): void;
+  deposit(number: number, value: number): void;
   transfer(
     sourceNumber: number,
     destinationNumber: number,
